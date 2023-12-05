@@ -3,19 +3,19 @@ const { Schema, model } = mongoose;
 
 const companySchema = new Schema(
   {
-    ContactFirstName: { String, required: true },
-    ContactLastName: { String, required: true },
-    CompanyName: { String, required: true },
+    ContactFirstName: { type: String, required: true },
+    ContactLastName: { type: String, required: true },
+    CompanyName: { type: String, required: true },
     CompanyEmail: {
-      String,
+      type: String,
       unique: true,
       required: true,
       lowercase: true,
       trim: true,
     },
-    CompanyPhone: { Number, required: false },
-    CompanyAdress: { String, required: true },
-    CompanyDescription: { String, required: false },
+    CompanyPhone: { type: Number, required: false },
+    CompanyAdress: { type: String, required: true },
+    CompanyDescription: { type: String, required: false },
     tasks: [{ type: Schema.Types.ObjectId, ref: "Task" }],
   },
   {
