@@ -61,3 +61,6 @@ Fields: title, value, stage (e.g., prospecting, negotiation), closeDate, contact
 
 ## Event/Activity Model:(Optional)
 Fields: title, description, date, contact (reference to Contact), createdAt, etc.
+
+## Admin panel
+Admin should define which users have which ability on CRUD. Also different users might see different information on the database. Some users should be restricted from the reach of data.
