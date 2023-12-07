@@ -23,8 +23,7 @@ router.post("/companies", (req, res, next) => {
     CompanyEmail,
     CompanyPhone,
     CompanyAdress,
-    CompanyDescription,
-    tasks: [],
+    CompanyDescription
   })
     .then((response) => res.status(201).json(response))
     .catch((err) => {
