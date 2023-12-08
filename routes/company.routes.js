@@ -12,7 +12,7 @@ router.post("/companies", (req, res, next) => {
     CompanyName,
     CompanyEmail,
     CompanyPhone,
-    CompanyAdress,
+    CompanyAddress,
     CompanyDescription,
   } = req.body;
 
@@ -22,7 +22,7 @@ router.post("/companies", (req, res, next) => {
     CompanyName,
     CompanyEmail,
     CompanyPhone,
-    CompanyAdress,
+    CompanyAddress,
     CompanyDescription
   })
     .then((response) => res.status(201).json(response))
