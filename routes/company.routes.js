@@ -35,7 +35,6 @@ router.post("/companies", (req, res, next) => {
 // Retrive all companies
 router.get("/companies", (req, res, next) => {
   Company.find()
-    .populate("tasks")
     .then((companiesArr) => {
       res.json(companiesArr);
     })
