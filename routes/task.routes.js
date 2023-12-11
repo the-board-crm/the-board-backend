@@ -17,7 +17,7 @@ router.post("/tasks", (req, res, next) => {
 
 router.get("/tasks", (req, res, next) => {
   Task.find()
-    .populate("companies")
+    // .populate("companies")
     .then((tasks) => {
       res.json(tasks);
     })

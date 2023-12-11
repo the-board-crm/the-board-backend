@@ -6,24 +6,25 @@ const { response } = require("express");
 
 // Create new company
 router.post("/companies", (req, res, next) => {
+  console.log("Received Request Body:", req.body);
   const {
-    ContactFirstName,
-    ContactLastName,
-    CompanyName,
-    CompanyEmail,
-    CompanyPhone,
-    CompanyAddress,
-    CompanyDescription,
+    contactFirstName,
+    contactLastName,
+    companyName,
+    companyEmail,
+    companyPhone,
+    companyAddress,
+    companyDescription,
   } = req.body;
 
   Company.create({
-    ContactFirstName,
-    ContactLastName,
-    CompanyName,
-    CompanyEmail,
-    CompanyPhone,
-    CompanyAddress,
-    CompanyDescription
+    contactFirstName,
+    contactLastName,
+    companyName,
+    companyEmail,
+    companyPhone,
+    companyAddress,
+    companyDescription
   })
     .then((response) => res.status(201).json(response))
     .catch((err) => {
