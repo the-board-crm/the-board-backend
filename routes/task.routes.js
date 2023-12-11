@@ -7,7 +7,7 @@ router.post("/tasks", (req, res, next) => {
   const { title, description, dueDate, completed, contact, createdAt } =
     req.body;
 
-  Task.create({ title, description, dueDate, completed, contact, createdAt })
+  Task.create({ title, description, dueDate, completed: Boolean(completed), contact, createdAt })
     .then((response) => res.status(201).json(response))
     .catch((err) => {
       console.log(err);
