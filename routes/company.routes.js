@@ -53,7 +53,7 @@ router.get("/companies/:companyId", (req, res, next) => {
     return;
   }
   Company.findById(companyId)
-    .populate("tasks")
+   // .populate("tasks")
     .then((company) => res.status(200).json(company))
     .catch((err) => {
       console.log("Error while getting company details...", err);

@@ -31,7 +31,7 @@ router.get("/tasks/:id", (req, res, next) => {
   const { id } = req.params;
 
   Task.findById(id)
-    .populate("companies")
+    //.populate("companies")
     .then((task) => res.status(200).json(task))
     .catch((err) => {
       console.log(err);
