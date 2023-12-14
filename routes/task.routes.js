@@ -17,7 +17,7 @@ router.post("/tasks", (req, res, next) => {
 
 router.get("/tasks", (req, res, next) => {
   Task.find()
-    // .populate("companies")
+    .populate("contact")
     .then((tasks) => {
       res.json(tasks);
     })
@@ -31,7 +31,7 @@ router.get("/tasks/:id", (req, res, next) => {
   const { id } = req.params;
 
   Task.findById(id)
-    //.populate("companies")
+    .populate("contact")
     .then((task) => res.status(200).json(task))
     .catch((err) => {
       console.log(err);

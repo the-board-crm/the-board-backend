@@ -13,7 +13,7 @@ const taskSchema = new Schema({
   completed: { type: Boolean },
   contact: { type: mongoose.Schema.Types.ObjectId, ref: "Company" },
   createdAt: {
-    type: Date,
+    type: Date
   },
 });
 
